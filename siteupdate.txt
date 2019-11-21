@@ -1,3 +1,0 @@
-activity=sdfsf
-message=sdfsf
-releaseDate=25-04-2019

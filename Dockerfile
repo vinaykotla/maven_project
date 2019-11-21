@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 #RUN apt-get update
 #RUN apt-get install -y python3-pip mongodb 
 RUN pwd
-RUN ls -l /root
-RUN ls -l
-RUN python3 /root/test.py
+WORKDIR /opt/biz
+RUN ls -l /opt/biz
+RUN python3 /opt/biz/test.py
 

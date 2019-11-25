@@ -1,0 +1,10 @@
+[Settings]
+api_key: xxxxxxxxxxxxxxxxxx
+mongodb: mongodb://localhost:27017/test
+email_password: xxxxxxxxxx
+mongo_collection: my_coll
+from_email: john.smith@example.com
+file: mix.log
+username: user1
+password: xxxxxxxxx
+

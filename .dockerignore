@@ -1,0 +1,7 @@
+release.sh
+Dockerfile
+security_check.sh
+settings.public
+.git
+.dockerignore
+

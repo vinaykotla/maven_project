@@ -1,0 +1,10 @@
+[Settings]
+api_key: xxxxx
+mongodb: xxxxx
+email_password: xxxxx
+mongo_collection: xxxxx
+from_email: xxxxx
+file: xxxxx
+username: xxxxx
+password: xxxxx
+

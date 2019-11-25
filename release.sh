@@ -10,4 +10,4 @@ bash security_check.sh
 docker build -t ${name}/${tag} .
 docker stop ${name} || echo "stopped"
 docker rm ${name} || echo "deleted"
-docker run -d -p ${host_port}:${docker_port} --name=${name} ${name}/${tag}
+docker run -d -p ${host_port}:${docker_port} --name=${name} --restart unless-stopped ${name}/${tag}

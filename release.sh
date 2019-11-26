@@ -11,3 +11,18 @@ docker build -t ${name}/${tag} .
 docker stop ${name} || echo "stopped"
 docker rm ${name} || echo "deleted"
 docker run -d -p ${host_port}:${docker_port} --name=${name} --restart unless-stopped ${name}/${tag}
+#test
+if curl -I http://localhost:${host_port}/hello | grep 200;
+then
+    if grep "\"auth\":" ~/.docker/config.json;
+    then
+        docker tag ${name}/${tag} ${deploy_repo}/${name}:${tag}
+        docker push ${deploy_repo}/${name}:${tag}
+    else
+        echo "pls login and push the content"
+        exit 1
+    fi
+else
+    echo "container not working"
+    exit 1
+fi

@@ -12,6 +12,7 @@ docker stop ${name} || echo "stopped"
 docker rm ${name} || echo "deleted"
 docker run -d -p ${host_port}:${docker_port} --name=${name} --restart unless-stopped ${name}/${tag}
 #test
+sleep 5
 if curl -I http://localhost:${host_port}/hello | grep 200;
 then
     if grep "\"auth\":" ~/.docker/config.json;

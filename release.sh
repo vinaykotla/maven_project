@@ -18,7 +18,7 @@ then
     if grep "\"auth\":" ~/.docker/config.json;
     then
         docker tag ${name}/${tag} ${deploy_repo}/${name}:$(date +%F_%H-%M)
-        docker push ${deploy_repo}/${name}:${tag}
+        docker push ${deploy_repo}/${name}:$(date +%F_%H-%M)
     else
         echo "pls login and push the content"
         exit 1
